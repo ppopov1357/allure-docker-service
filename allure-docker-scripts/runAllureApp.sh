@@ -1,2 +1,5 @@
 #!/bin/bash
-python${PYTHON_VERSION} $ROOT/allure-docker-api/app.py
+
+WORKERS_CONFIG="${WORKERS:-7}"
+
+gunicorn -w "$WORKERS_CONFIG" "allure-docker-api.app:app" -b "$HOST:$PORT" --timeout 1000
