@@ -1720,5 +1720,5 @@ def check_process(process_file, project_id):
 
 if __name__ == '__main__':
     if DEV_MODE == 1:
-        LOGGER.info('Starting in DEV_MODE')
+        LOGGER.info('Starting in DEV_MODE:')
         app.run(host=HOST, port=PORT)
